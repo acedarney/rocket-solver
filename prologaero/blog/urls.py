@@ -6,5 +6,5 @@ from .views import PostDetailView
 urlpatterns = [
     url('', ListView.as_view(queryset=Post.objects.all().order_by('-date')[:25],
                              template_name='blog/blog.html'), name='blog'),
-    url('<pk>/', PostDetailView.as_view(template_name='blog/post.html'), name='post')
+    url('<int:pk>/', PostDetailView.as_view(), name='post')
 ]

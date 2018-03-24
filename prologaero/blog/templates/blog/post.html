@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog Post {{ object.pk }}</title>
+    <title>Blog Post {{ post.pk }}</title>
 </head>
 <body>
-    <h1>{{ object.title }}</h1>
-    <p>{{ object.date }}</p>
-    <p>{{ object.body|safe|linebreaks }}</p>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.date }}</p>
+    <p>{{ post.body|safe|linebreaks }}</p>
 </body>
 </html>
