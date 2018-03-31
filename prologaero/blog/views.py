@@ -10,10 +10,10 @@ def index(request):
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = 'blog/post.html'
+    # template_name = 'blog/post_detail.html'
 
 
 class PostListView(ListView):
-    model = Post
-    template_name = 'blog/blog.html'
+    queryset = Post.objects.all().order_by('-date')
+    # template_name = 'blog/post_list.html'
     # TODO: Sort the blog posts in descending order

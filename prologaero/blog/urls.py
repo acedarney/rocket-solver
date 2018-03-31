@@ -5,5 +5,5 @@ from .views import PostDetailView, PostListView, index
 urlpatterns = [
     path('', index, name='blog-index'),
     url('posts/', PostListView.as_view(), name='blog'),
-    url('post/<int:pk>/', PostDetailView.as_view(), name='post')
+    url('post/<int:id>/', PostDetailView.as_view(), name='post')
 ]
